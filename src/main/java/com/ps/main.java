@@ -61,6 +61,27 @@ public class main {
 
 */
 
+//Calculator 3
+/*
+        //User inputs their Annuity responses
+
+        System.out.print("Enter your monthly payout amount: ");
+        double monthlyPayout = scanner.nextDouble();
+        System.out.print("Enter your expected interest rate: ");
+        float expectedInterestRate = scanner.nextFloat();
+        System.out.print("Enter your number of years: ");
+        int yearsPayout = scanner.nextInt();
+
+        //Calculations of the inputted data
+
+       double monthlyInterestAnnuity = (expectedInterestRate / 100 / 12);
+       int paymentNumbers = (yearsPayout * 12);
+       double presentValue = monthlyPayout * (1 - Math.pow(1 + monthlyInterestAnnuity, -yearsPayout )) / monthlyInterestAnnuity;
+
+       //Display the results of the annuity
+
+        System.out.printf("Present value of the annuity is: %.2f", presentValue);
+*/
 
 
 
