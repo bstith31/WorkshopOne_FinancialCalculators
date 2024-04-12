@@ -1,6 +1,8 @@
 package com.ps;
 
 import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 
 public class main {
 
@@ -129,7 +131,7 @@ public class main {
 
         //Display Results
 
-        System.out.printf("Monthly payment: $%.2f ", monthlyPayment);
+        System.out.printf("Monthly payment: $%.2f\n", monthlyPayment);
         System.out.print(String.format("Total interest paid: $%.2f", totalInterest));
     }
 
@@ -153,7 +155,7 @@ public class main {
 
         //Display the results of the CD
 
-        System.out.printf("Your future value is: $%.2f ", futureValue);
+        System.out.printf("Your future value is: $%.2f\n", futureValue);
         System.out.print(String.format("The total amount of interest earned is: $%.2f", totalInterestEarned));
         }
 
