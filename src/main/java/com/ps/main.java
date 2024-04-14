@@ -12,10 +12,11 @@ public class main {
         boolean validChoice = false;
 
         while (!validChoice) {
-            System.out.println("Please select from the following calculators:\n" +
+            System.out.println("Please select from the following calculators:\n\n" +
                     "1. Mortgage Calculator\n" +
                     "2. Future Value Calculator\n" +
-                    "3. Present Value of Annuity\n");
+                    "3. Present Value of Annuity\n" +
+                    "4. Terminate application\n");
 
             System.out.print("Which calculator will you be using? ");
             try {
@@ -32,6 +33,10 @@ public class main {
                         break;
                     case 3:
                         annuityPresentValueCalculator(scanner);
+                        validChoice = true;
+                        break;
+                    case 4:
+                        System.out.println("Terminating application, thank you for using the calculators!");
                         validChoice = true;
                         break;
                     default:
@@ -95,10 +100,11 @@ public class main {
         public static void annuityPresentValueCalculator(Scanner scanner){
         System.out.print("Enter your monthly payout amount: $");
         double monthlyPayout = scanner.nextDouble();
-        System.out.print("Enter your number of years: ");
-        int yearsPayout = scanner.nextInt();
         System.out.print("Enter your expected interest rate: ");
         float expectedInterestRate = scanner.nextFloat();
+        System.out.print("Enter your number of years: ");
+        int yearsPayout = scanner.nextInt();
+
 
         //Calculations of the inputted data
        double monthlyInterestAnnuity = (expectedInterestRate / 1200);
