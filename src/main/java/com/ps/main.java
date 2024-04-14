@@ -1,7 +1,7 @@
 package com.ps;
 
 import java.util.Scanner;
-
+import java.util.InputMismatchException;
 
 public class main {
 
@@ -9,33 +9,44 @@ public class main {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Please select from the following calculators:\n" +
-                "1. Mortgage Calculator\n" +
-                "2. Future Value Calculator\n" +
-                "3. Present Value of Annuity\n");
+        boolean validChoice = false;
 
-        System.out.print("Which calculator will you be using? ");
-        int userChoice = scanner.nextInt();
+        while (!validChoice) {
+            System.out.println("Please select from the following calculators:\n" +
+                    "1. Mortgage Calculator\n" +
+                    "2. Future Value Calculator\n" +
+                    "3. Present Value of Annuity\n");
 
-        switch (userChoice) {
-            case 1:
-                mortgageCalculator(scanner);
-                break;
-            case 2:
-                futureValueCalculator(scanner);
-                break;
-            case 3:
-                annuityPresentValueCalculator(scanner);
-                break;
-            default:
-                System.out.println("Invalid calculator, please choose a valid input");
+            System.out.print("Which calculator will you be using? ");
+            try {
+                int userChoice = scanner.nextInt();
+
+                switch (userChoice) {
+                    case 1:
+                        mortgageCalculator(scanner);
+                        validChoice = true;
+                        break;
+                    case 2:
+                        futureValueCalculator(scanner);
+                        validChoice = true;
+                        break;
+                    case 3:
+                        annuityPresentValueCalculator(scanner);
+                        validChoice = true;
+                        break;
+                    default:
+                        System.out.println("Invalid calculator, please choose a valid input\n");
+                }
+            } catch (InputMismatchException e) {
+                System.out.print("Invalid input");
+                scanner.nextLine();
+            }
+
         }
-
-        scanner.close();
-
     }
 
-    public static void mortgageCalculator(Scanner scanner){
+
+    public static void mortgageCalculator(Scanner scanner) {
         System.out.print("What is the principal value of the mortgage: ");
         double principalMortgage = scanner.nextDouble();
         System.out.print("What is your annual interest rate: ");
@@ -47,7 +58,7 @@ public class main {
         double monthlyInterestRate = (annualInterestRate / 100 / 12);
         int numberOfPayments = (loanLengthYears * 12);
         double monthlyPayment = (principalMortgage * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
-        double totalPayment = (monthlyPayment*numberOfPayments);
+        double totalPayment = (monthlyPayment * numberOfPayments);
         double totalInterest = (totalPayment - principalMortgage);
 
         //Display Results
