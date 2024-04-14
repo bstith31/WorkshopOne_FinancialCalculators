@@ -47,7 +47,7 @@ public class main {
 
 
     public static void mortgageCalculator(Scanner scanner) {
-        System.out.print("What is the principal value of the mortgage: ");
+        System.out.print("What is the principal value of the mortgage: $");
         double principalMortgage = scanner.nextDouble();
         System.out.print("What is your annual interest rate: ");
         float annualInterestRate = scanner.nextFloat();
@@ -72,7 +72,7 @@ public class main {
 
         //User inputs initial CD values
         public static void futureValueCalculator(Scanner scanner){
-        System.out.print("What was your initial Deposit Amount: ");
+        System.out.print("What was your initial Deposit Amount: $");
         int initialDeposit = scanner.nextInt();
         System.out.print("What is your interest rate: ");
         float futureInterestRate = scanner.nextFloat();
@@ -93,7 +93,7 @@ public class main {
 
         //User inputs their Annuity responses
         public static void annuityPresentValueCalculator(Scanner scanner){
-        System.out.print("Enter your monthly payout amount: ");
+        System.out.print("Enter your monthly payout amount: $");
         double monthlyPayout = scanner.nextDouble();
         System.out.print("Enter your number of years: ");
         int yearsPayout = scanner.nextInt();
@@ -106,6 +106,6 @@ public class main {
        double presentValue = monthlyPayout * (1 - Math.pow((1 + monthlyInterestAnnuity), -paymentNumbers )) / monthlyInterestAnnuity;
 
        //Display the results of the annuity
-        System.out.printf("Present value of the annuity is: %.2f", presentValue);
+        System.out.printf("Present value of the annuity is: $%.2f", presentValue);
         }
 }
