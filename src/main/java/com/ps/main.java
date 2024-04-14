@@ -1,20 +1,13 @@
 package com.ps;
 
 import java.util.Scanner;
-import java.util.Map;
-import java.util.HashMap;
+
 
 public class main {
 
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-
-        /*
-        Attempt at mapping the inputs instead of switch statements.
-        Map<Integer> calculatorMap = new
-
-         */
 
         System.out.println("Please select from the following calculators:\n" +
                 "1. Mortgage Calculator\n" +
@@ -35,7 +28,7 @@ public class main {
                 annuityPresentValueCalculator(scanner);
                 break;
             default:
-                System.out.println("Invalid Calculator");
+                System.out.println("Invalid calculator, please choose a valid input");
         }
 
         scanner.close();
@@ -91,15 +84,15 @@ public class main {
         public static void annuityPresentValueCalculator(Scanner scanner){
         System.out.print("Enter your monthly payout amount: ");
         double monthlyPayout = scanner.nextDouble();
-        System.out.print("Enter your expected interest rate: ");
-        float expectedInterestRate = scanner.nextFloat();
         System.out.print("Enter your number of years: ");
         int yearsPayout = scanner.nextInt();
+        System.out.print("Enter your expected interest rate: ");
+        float expectedInterestRate = scanner.nextFloat();
 
         //Calculations of the inputted data
-       double monthlyInterestAnnuity = (expectedInterestRate / 100 / 12);
+       double monthlyInterestAnnuity = (expectedInterestRate / 1200);
        int paymentNumbers = (yearsPayout * 12);
-       double presentValue = monthlyPayout * (1 - Math.pow(1 + monthlyInterestAnnuity, -yearsPayout )) / monthlyInterestAnnuity;
+       double presentValue = monthlyPayout * (1 - Math.pow((1 + monthlyInterestAnnuity), -paymentNumbers )) / monthlyInterestAnnuity;
 
        //Display the results of the annuity
         System.out.printf("Present value of the annuity is: %.2f", presentValue);
