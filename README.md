@@ -3,21 +3,27 @@
 <img width="1000" alt="screenshot of calculators" src="https://github.com/bstith31/WorkshopOne_FinancialCalculators/assets/161260764/dbdf7e7c-90d5-4ba5-bd1d-07cf0d2695b0">
 
 # Mortgage Payment Calculator
+
 This calculator is utilized to calculate how much the monthly mortgage payment for a loan will be.
 
 <img width="1000" alt="screenshot of calculators" src="https://github.com/bstith31/WorkshopOne_FinancialCalculators/assets/161260764/f09a6123-cb7e-4fb5-be37-1827ca7429b5">
 
 # Future Value Calculator
 
+This calculator is utilized to calculate the future value of a one-time deposit CD once it matures.
+
 <img width="1000" alt="screenshot of calculators" src="https://github.com/bstith31/WorkshopOne_FinancialCalculators/assets/161260764/df375809-5706-4a59-8049-b164e442708a">
 
 # Present Value of Annuity Calculator
+
+This calculator is utizied to calculate the present value of an annuity.
 
 <img width="1000" alt="screenshot of calculators" src="https://github.com/bstith31/WorkshopOne_FinancialCalculators/assets/161260764/deedaca4-dbce-4a94-8549-fc8dd4451605">
 
 # Handling Errors
 
 When a user inputs the wrong value into the main terminal, it will display and error message and place them back at the main menu. This will work with any given value outside of 1-4.
+
 <img width="1000" alt="screenshot of calculators" src="https://github.com/bstith31/WorkshopOne_FinancialCalculators/assets/161260764/1c871f5e-d192-4096-b710-450fcacbeda6">
 
 # Interesting piece of code
