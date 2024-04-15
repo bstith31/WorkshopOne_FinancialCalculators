@@ -11,7 +11,7 @@ This calculator is utilized to calculate how much the monthly mortgage payment f
 
 <img width="1000" alt="screenshot of calculators" src="https://github.com/bstith31/WorkshopOne_FinancialCalculators/assets/161260764/df375809-5706-4a59-8049-b164e442708a">
 
-Present Value of Annuity Calculator
+# Present Value of Annuity Calculator
 
 <img width="1000" alt="screenshot of calculators" src="https://github.com/bstith31/WorkshopOne_FinancialCalculators/assets/161260764/deedaca4-dbce-4a94-8549-fc8dd4451605">
 
