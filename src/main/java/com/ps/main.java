@@ -40,17 +40,16 @@ public class main {
                         validChoice = true;
                         break;
                     default:
-                        System.out.println("Invalid calculator, please choose a valid input\n");
+                        System.out.println("\nInvalid calculator, please choose a valid input\n");
                 }
             } catch (InputMismatchException e) {
-                System.out.print("Invalid input");
                 scanner.nextLine();
             }
 
         }
     }
 
-
+    // Calculator 1
     public static void mortgageCalculator(Scanner scanner) {
         System.out.print("What is the principal value of the mortgage: $");
         double principalMortgage = scanner.nextDouble();
@@ -67,15 +66,12 @@ public class main {
         double totalInterest = (totalPayment - principalMortgage);
 
         //Display Results
-
         System.out.printf("Monthly payment: $%.2f\n", monthlyPayment);
         System.out.print(String.format("Total interest paid: $%.2f", totalInterest));
     }
 
-
-//Calculator 2
-
-        //User inputs initial CD values
+    //Calculator 2
+     //User inputs initial CD values
         public static void futureValueCalculator(Scanner scanner){
         System.out.print("What was your initial Deposit Amount: $");
         int initialDeposit = scanner.nextInt();
@@ -93,9 +89,7 @@ public class main {
         System.out.print(String.format("The total amount of interest earned is: $%.2f", totalInterestEarned));
         }
 
-
-//Calculator 3
-
+    //Calculator 3
         //User inputs their Annuity responses
         public static void annuityPresentValueCalculator(Scanner scanner){
         System.out.print("Enter your monthly payout amount: $");
@@ -104,7 +98,6 @@ public class main {
         float expectedInterestRate = scanner.nextFloat();
         System.out.print("Enter your number of years: ");
         int yearsPayout = scanner.nextInt();
-
 
         //Calculations of the inputted data
        double monthlyInterestAnnuity = (expectedInterestRate / 1200);
